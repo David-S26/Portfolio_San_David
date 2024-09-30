@@ -1,4 +1,4 @@
-// Affichage projets bouton "En savoir plus"-"Réduire" //
+// Affichage des description,  bouton "En savoir plus" + fonction "Réduire" //
 
 document.addEventListener("DOMContentLoaded", function() {
     let buttonsMore = document.querySelectorAll("#more");
@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
         button.addEventListener("click", function(e) {
             e.stopPropagation();
 
-            // Obtenir la description correspondante au bouton cliqué
+            
             let currentDescription = descriptions[index];
 
             if (currentDescription.style.display === "none" || currentDescription.style.display === "") {
@@ -60,7 +60,7 @@ window.onscroll = () => {
 
 }; 
 
-// Scroll reveal des différentes sections //
+// Scroll reveal //
 
 ScrollReveal({
     reset: true,
@@ -74,7 +74,7 @@ ScrollReveal().reveal('.home-img, .techno-box, .services-container, .portfolio-b
 ScrollReveal().reveal('.home-content h1, .about-img', {origin: 'left'});
 ScrollReveal().reveal('.home-content p, .home-content li, .about-content', {origin: 'right'}); 
 
-// Défilement texte de présentation //
+// Défilement description //
 
     const typed = new Typed('.multiple-text', {
         strings: ['Développeur Web Junior'],
@@ -85,7 +85,7 @@ ScrollReveal().reveal('.home-content p, .home-content li, .about-content', {orig
     });
 });
 
-// Toggle icon navbar //
+// Toggle navbar //
 
 document.addEventListener('DOMContentLoaded', () => {
     let menuIcon = document.querySelector('#menu-icon');
@@ -100,10 +100,10 @@ document.addEventListener('DOMContentLoaded', () => {
 // MODALE //
 
 document.addEventListener("DOMContentLoaded", function() {
-  // Get all portfolio boxes
+ 
   const portfolioBoxes = document.querySelectorAll(".portfolio-box");
 
-  // Add click event to each portfolio box to open the corresponding modal
+  // Ouverture de la modal pour chaque projet
   portfolioBoxes.forEach(box => {
       box.addEventListener("click", function() {
           const projectName = this.querySelector("h4").textContent.trim().toLowerCase().replace(/\s+/g, '-');
@@ -117,10 +117,10 @@ document.addEventListener("DOMContentLoaded", function() {
       });
   });
 
-  // Get all close buttons
+  // BTN close
   const closeButtons = document.querySelectorAll(".close");
 
-  // Add click event to each close button to close the modal
+  // BTN CLOSE qui ferme la modale pou chaque modal 
   closeButtons.forEach(button => {
       button.addEventListener("click", function() {
           const modalId = this.getAttribute('data-modal');
@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", function() {
       });
   });
 
-  // Close the modal if the user clicks outside of the modal
+  // Ferme la modal si click en dehors
   window.addEventListener("click", function(event) {
       if (event.target.classList.contains('modal')) {
           event.target.style.display = "none";
