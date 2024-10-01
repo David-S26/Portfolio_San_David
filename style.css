@@ -38,10 +38,8 @@ section {
 /*HEADER*/
 
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+    display: flex;
+    max-width: 90%;
     padding: 2rem 9%;
     background: rgba(9, 52, 97, 0.676);
     display: flex;
@@ -91,7 +89,7 @@ section {
 
 .home-img {
     margin-left: 100px;
-    width: 35vw;
+    width: 50%;
     animation: floatImage 4s ease-in-out infinite;
 }
 
