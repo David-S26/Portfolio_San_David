@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css"/>
     <link rel="stylesheet" href="style.css"> 
     <script src="./script.js"></script> 
+    <!-- liens JS -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+  
     
     <!-- Twitter Card data -->
 	<meta name="twitter:card" content="summary_large_image">
@@ -111,10 +114,14 @@
 
     <section class="home" id="home">
         <div class="home-content">
-            <h3>Bonjour, je me présente,</h3>
-            <h1>David San</h1>
-            <h3>Et je suis <span class="multiple-text"></span></h3>
-           
+            <div class="containerr">
+                <p class="sentence">
+                    <span class="texte1">Bonjour, je me présente,</span><br/>
+                    <span class="texte2">David San</span><br/>
+                    <span class="word texte3">et je suis </span>
+                    <span class="word">Développeur web Junior</span>
+                </p>
+            </div>
             <div class="social-media">
                 <a href="" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                 <a href="https://github.com/David-S26" target="_blank"><i class="fa-brands fa-github"></i></a>
@@ -127,7 +134,7 @@
         </div>
 
         <div class="home-img">
-            <img src="./images/logo.jpg" alt="photo-profil">             
+            <img src="./images/logo2.png" alt="photo-profil">             
         </div>
     </section>
 
@@ -158,7 +165,7 @@
         <h2 class="heading">Mes <span>Compétences</span></h2>           
         <div class="services-container">
 
-                <div class="services-box">
+                <div class="services-box first-container">
                     <i class="fa-brands fa-html5" id="html5"></i>
                     <i class="fa-brands fa-css3-alt" id="css3"></i>
                     <i class="fa-brands fa-js" id="js"></i>
@@ -180,7 +187,7 @@
             
            
  
-    <div class="services-box">
+        <div class="services-box seconde-container">
         <i class="fa-brands fa-node-js" id="node"></i><img src="images/icons8-mongo-db-48.png" alt="">
         <h3>Back End</h3>
         <p class="services-description"><span>Node.js</span> - Création d'API RESTful<br>
@@ -191,9 +198,9 @@
             <span>Git et Github</span> - Gestion de code source <br/>                    
         </p>           
         <a class="btn" id="more">En savoir plus</a> 
-    </div>           
+     </div>           
 
-    <div class="services-box">
+        <div class="services-box third-container">
         <i class="fa-solid fa-screwdriver-wrench"></i>
         <h3>Débug, optimisation et référencement SEO</h3>
         <p class="services-description"><span>Accessibilité</span> - Optimisation des performances d'un site <br>
@@ -201,7 +208,7 @@
             <span>Référencement/SEO</span> - Micro-données et schema.org (Google Rich Snippet) <br>
 
             <a class="btn" id="more">En savoir plus</a>
-    </div>        
+     </div>        
    </section>
 
     <!--SECTION PERSO-->
@@ -405,10 +412,7 @@
         </div>
     </footer>
 
-    <!--LIENS JS-->
-
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+   
     
 </body>
 </html>

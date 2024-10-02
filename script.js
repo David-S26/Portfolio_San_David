@@ -64,7 +64,7 @@ window.onscroll = () => {
 
 ScrollReveal({
     reset: true,
-    distance: '80px',
+    distance: '0px',
     duration: 1000,
     delay: 200
 })
@@ -77,7 +77,7 @@ ScrollReveal().reveal('.home-content p, .home-content li, .about-content', {orig
 // Défilement description //
 
     const typed = new Typed('.multiple-text', {
-        strings: ['Développeur Web Junior'],
+        strings: ['Développeur Web'],
         typeSpeed: 100,
         backSpeed: 100,
         backDelay: 1000,
@@ -153,24 +153,12 @@ window.onload = function() {
     });
   };
 
-
-  let currentSlide = 0;
-
-function changeSlide(direction) {
-    const slides = document.querySelectorAll('.slide');
-    slides[currentSlide].classList.remove('active');
-
-    currentSlide = (currentSlide + direction + slides.length) % slides.length;
-    slides[currentSlide].classList.add('active');
-
-    const slideWidth = slides[currentSlide].clientWidth;
-    const slidesContainer = document.querySelector('.slides');
-    slidesContainer.style.transform = `translateX(-${slideWidth * currentSlide}px)`;
-}
-
-// Affiche la première diapositive au chargement
-document.addEventListener('DOMContentLoaded', () => {
-    const slides = document.querySelectorAll('.slide');
-    const slidesContainer = document.querySelector('.slides');
-    slidesContainer.style.width = `${slides.length * 100}%`;
+  // Section home //
+  document.addEventListener('DOMContentLoaded', () => {
+    const words = document.querySelectorAll('.word');
+    words.forEach((word, index) => {
+        setTimeout(() => {
+            word.style.opacity = 1;
+        }, index * 800); // Chaque mot apparaît après 800ms, de façon séquentielle
+    });
 });
