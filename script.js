@@ -76,9 +76,9 @@ ScrollReveal().reveal('.home-content p, .home-content li, .about-content', {orig
 
 // Défilement description //
 
-    const typed = new Typed('.multiple-text', {
-        strings: ['Développeur Web'],
-        typeSpeed: 100,
+    const typed = new Typed('',{
+        strings: [''],
+        typeSpeed: 200,
         backSpeed: 100,
         backDelay: 1000,
         loop: true
