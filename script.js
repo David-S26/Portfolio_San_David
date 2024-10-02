@@ -139,7 +139,6 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
-
   // Section home //
   document.addEventListener('DOMContentLoaded', () => {
     const words = document.querySelectorAll('.word');
