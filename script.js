@@ -139,19 +139,6 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
- // Bouncing text
-window.onload = function() {
-    const text = document.getElementById('bouncing-text');
-    const letters = text.textContent.split('');
-  
-    text.innerHTML = '';
-  
-    letters.forEach((letter, index) => {
-      const span = document.createElement('span');
-      span.textContent = letter;
-      text.appendChild(span);
-    });
-  };
 
   // Section home //
   document.addEventListener('DOMContentLoaded', () => {
