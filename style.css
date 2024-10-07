@@ -574,13 +574,13 @@ span {
     margin-bottom: 3rem;
 }
 
-.input-box {
+.input-infos {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
-.input-box input,
+.input-infos input,
 .contact form textarea {
     width: 100%;
     padding: 1.5rem;
@@ -620,7 +620,7 @@ span {
     font-size: 1.6rem;
 }
 
-.footer-iconTop a {
+.footer-arrowTop a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -630,12 +630,12 @@ span {
     transition: .5s ease;
 }
 
-.footer-iconTop a i {
+.footer-arrowTop a i {
     font-size: 2.4rem;
     color: var(--second-bg-color);
 }
 
-.footer-iconTop a:hover {
+.footer-arrowTop a:hover {
     box-shadow: 0 0 1rem var(--main-color);
 }
 

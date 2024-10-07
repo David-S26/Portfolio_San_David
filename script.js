@@ -1,4 +1,4 @@
-// Affichage des description,  bouton "En savoir plus" + fonction "Réduire" //
+// Fonction affichage des description,  Btn more  + réduire //
 
 document.addEventListener("DOMContentLoaded", function() {
     let buttonsMore = document.querySelectorAll("#more");
@@ -22,7 +22,21 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-// Pour le scroll des sections //
+// Scroll reveal //
+
+ScrollReveal({
+    reset: true,
+    distance: '0px',
+    duration: 1000,
+    delay: 200
+})
+
+ScrollReveal().reveal('.home-content, .heading', {origin: 'top'});
+ScrollReveal().reveal('.home-img, .techno-box, .services-container, .portfolio-box, .contact form', {origin: 'bottom'});
+ScrollReveal().reveal('.home-content h1, .about-img', {origin: 'left'});
+ScrollReveal().reveal('.home-content p, .home-content li, .about-content', {origin: 'right'}); 
+
+// ScrollReveal des sections //
 
 document.addEventListener("DOMContentLoaded", function() {
 
@@ -44,13 +58,13 @@ window.onscroll = () => {
         };
     });
 
-// Pour la navbar //
+// Navbar à plus de 100pixel de scroll applique l'effet sticky //
 
     let header = document.querySelector('header');
 
     header.classList.toggle('sticky', window.scrollY > 100);
 
-// Remove toggle icon and navbar au click sur la navbar lors du scroll //
+// Remove toggle icon et la  navbar pour faire apparaitre les liens //
 
     let menuIcon = document.querySelector('#menu-icon');
     let navbar = document.querySelector('.navbar');
@@ -60,21 +74,7 @@ window.onscroll = () => {
 
 }; 
 
-// Scroll reveal //
-
-ScrollReveal({
-    reset: true,
-    distance: '0px',
-    duration: 1000,
-    delay: 200
-})
-
-ScrollReveal().reveal('.home-content, .heading', {origin: 'top'});
-ScrollReveal().reveal('.home-img, .techno-box, .services-container, .portfolio-box, .contact form', {origin: 'bottom'});
-ScrollReveal().reveal('.home-content h1, .about-img', {origin: 'left'});
-ScrollReveal().reveal('.home-content p, .home-content li, .about-content', {origin: 'right'}); 
-
-// Défilement description //
+// Défilement description home-img //
 
     const typed = new Typed('',{
         strings: [''],
